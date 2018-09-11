@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.game.boku_tetsu"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="26" />
+
+       	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+		<uses-permission android:name="android.permission.INTERNET" />
+
+            <!-- コメントアウト
+                                    横表示
+              android:screenOrientation="landscape"
+                                     
+                                     縦表示
+              android:screenOrientation="portrait"
+ 
+                                      縦横表示
+              android:screenOrientation="unspecified"
+                          
+             -->		
+			
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+
+        <activity
+            android:name=".A0000_Act_InitializationProgram"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+  
+        <activity
+            android:name=".A0001_Act_MainMenu"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name" >
+        </activity>  
+        
+        <activity
+            android:name=".A0002_Act_SelectStage"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name" >
+        </activity>          
+       
+        <activity
+            android:name=".B0000_Act_PlayGame"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name" >
+        </activity>  
+    
+    
+    </application>
+
+</manifest>
