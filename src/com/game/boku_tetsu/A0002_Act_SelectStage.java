@@ -265,7 +265,10 @@ public class A0002_Act_SelectStage extends __ExtendsActivity
 	        	    	
 	    	//アクテビティー切り替え
  		    //Intent varIntent = new Intent(this, A0001_Act_MainMenu.class);
-			Intent varIntent = new Intent(this, B0000_Act_PlayGame.class);
+			Intent varIntent = new Intent(this, B0100_Act_PlayGame.class);
+			//Intent varIntent = new Intent(this, C0100_Act_GamePlaying.class);			
+			
+			
 	        startActivity(varIntent);
 	        
 	    	//このアクティビティーの終了させ、次のアクティビティへ移動
@@ -279,7 +282,7 @@ public class A0002_Act_SelectStage extends __ExtendsActivity
 	    public void switchActivity_Return(View v)
 	    {   
 	        //次のアクティビティへ移動
-			Intent varIntent = new Intent(this, B0000_Act_PlayGame.class);
+			Intent varIntent = new Intent(this, B0100_Act_PlayGame.class);
 			startActivity(varIntent);
 			
 	        //このアクティビティーの終了させ、次のアクティビティへ移動

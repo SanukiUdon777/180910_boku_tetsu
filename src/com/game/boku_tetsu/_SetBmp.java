@@ -67,8 +67,23 @@ class _bmp
 	final static int bmp_taihou_b		= 38;
 	final static int bmp_taihou_l		= 39;	
 	final static int bmp_taihou_r		= 40;
+
+	final static int bmp_pikopiko000	= 41;
+	final static int Player003			= 42;
+	final static int bmp_pikopiko002	= 43;	
+	final static int bmp_pikopiko003	= 44;
+
+	final static int bmp_char_c			= 45;
+	final static int bmp_char_l			= 46;
+	final static int bmp_char_r			= 47;	
+	final static int bmp_test			= 48;
+
+	final static int de0000				= 49;
+	final static int de0001				= 50;
+	final static int de0002				= 51;	
+	final static int de0003				= 52;
 	
-	final static int BMP_END			= ( bmp_taihou_r + 1 );				//登録番号の終端番号
+	final static int BMP_END			= ( de0003 + 1 );				//登録番号の終端番号
 	
 //---------------------------------------------------------------------------//
 //BMP初期化データ値(画像データ設定値)
@@ -124,7 +139,22 @@ class _bmp
 		new BmpDataList( R.drawable.bmp_taihou_f, 		Player_RatioSize_XY,	Player_RatioSize_XY	),	//0037
 		new BmpDataList( R.drawable.bmp_taihou_b, 		Player_RatioSize_XY,	Player_RatioSize_XY ),	//0038
 		new BmpDataList( R.drawable.bmp_taihou_l, 		Player_RatioSize_XY,	Player_RatioSize_XY ),	//0039	
-		new BmpDataList( R.drawable.bmp_taihou_r, 		Player_RatioSize_XY,	Player_RatioSize_XY )	//0040	
+		new BmpDataList( R.drawable.bmp_taihou_r, 		Player_RatioSize_XY,	Player_RatioSize_XY ),	//0040	
+
+		new BmpDataList( R.drawable.pikopiko_black_000, Player_RatioSize_XY*2.5f,	Player_RatioSize_XY*2.5f	),	//0041
+		new BmpDataList( R.drawable.bmp_char_0002, 		Player_RatioSize_XY,	Player_RatioSize_XY ),	//0042
+		new BmpDataList( R.drawable.pikopiko_black_000, Player_RatioSize_XY,	Player_RatioSize_XY ),	//0043	
+		new BmpDataList( R.drawable.pikopiko_black_000, Player_RatioSize_XY,	Player_RatioSize_XY ),	//0044	
+	
+		new BmpDataList( R.drawable.bmp_char_c, Player_RatioSize_XY,	Player_RatioSize_XY	),	//0045
+		new BmpDataList( R.drawable.bmp_char_l, Player_RatioSize_XY,	Player_RatioSize_XY ),	//0046
+		new BmpDataList( R.drawable.bmp_char_r, Player_RatioSize_XY,	Player_RatioSize_XY ),	//0047	
+		new BmpDataList( R.drawable.bmp_pb01, 	Player_RatioSize_XY,	Player_RatioSize_XY ),	//0048	
+		
+		new BmpDataList( R.drawable.de_0000, Player_RatioSize_XY,	Player_RatioSize_XY	),		//0049
+		new BmpDataList( R.drawable.de_0001, Player_RatioSize_XY,	Player_RatioSize_XY ),		//0050
+		new BmpDataList( R.drawable.de_0000, Player_RatioSize_XY,	Player_RatioSize_XY ),		//0051	
+		new BmpDataList( R.drawable.de_0000, Player_RatioSize_XY,	Player_RatioSize_XY )		//0052	
 		
 	};
 }//End

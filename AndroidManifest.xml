@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="17"
+        android:minSdkVersion="14"
         android:targetSdkVersion="26" />
 
        	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -52,12 +52,36 @@
         </activity>          
        
         <activity
-            android:name=".B0000_Act_PlayGame"
-            android:screenOrientation="portrait"
+            android:name=".B0100_Act_PlayGame"
+            android:screenOrientation="landscape"
             android:label="@string/app_name" >
         </activity>  
-    
-    
+       
+        <activity
+            android:name=".D0100_Act_PlayGame"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name" >
+        </activity>      
+ 
+        <activity
+            android:name=".E0100_Act_PlayGame"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name" >
+        </activity> 
+
+         <activity
+            android:name=".E0010_MainMenu"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name" >
+        </activity>        
+        
+        <activity
+            android:name=".E0050_StageSelect"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name" >
+        </activity> 
+        
+        
     </application>
 
 </manifest>

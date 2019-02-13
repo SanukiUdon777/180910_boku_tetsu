@@ -376,14 +376,32 @@ class _func
 			
 			public static void Bar_FixDiaplay(Canvas Canvas, Paint DrawPaint, float XStartPos, float YStartPos, float XSize, float YSize, float Gauge)
 			{
-				Gauge = Gauge/100;
-
+				if(Gauge>=100)
+				{
+					Gauge = 0;
+				}
+				else if(Gauge<=0)
+				{
+					Gauge = 1;
+				}
+				else
+				{
+					Gauge = 1-(Gauge/100);
+				}
+				
 				float InLineX =  XSize/100;	
-				float InLineY =  InLineX*2;
+				float InLineY =  YSize/50;
 
 				
-				Rect_STROKE_FixDiaplay(Canvas, DrawPaint, XStartPos, 				YStartPos, 			XStartPos+XSize, 			YStartPos-YSize, 			0.0001f, Color.WHITE, Style.FILL );
-				Rect_STROKE_FixDiaplay(Canvas, DrawPaint, XStartPos+(XSize*Gauge), 	YStartPos, 			XStartPos+XSize-InLineX, 	YStartPos-YSize+InLineY, 	0.0001f, Color.BLACK, Style.FILL );
+				float BarXSize = (XSize-(InLineX*2))*Gauge;
+				float BarOffsetPos = (XSize-(InLineX*2))*(1-Gauge);
+				
+				
+				Rect_STROKE_FixDiaplay(Canvas, DrawPaint, XStartPos, YStartPos, XSize, YSize, 0.0001f, Color.WHITE, Style.FILL );
+				Rect_STROKE_FixDiaplay(Canvas, DrawPaint, XStartPos+InLineX+BarOffsetPos, YStartPos-InLineY, BarXSize, YSize-InLineY*2, 0.0001f, Color.BLACK, Style.FILL );
+				
+				
+				//Rect_STROKE_FixDiaplay(Canvas, DrawPaint, XStartPos+(XSize*Gauge), 	YStartPos, 			XStartPos+XSize-InLineX, 	YStartPos-YSize+InLineY, 	0.0001f, Color.BLACK, Style.FILL );
 						
 			}
 			

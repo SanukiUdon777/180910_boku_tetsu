@@ -1,0 +1,14 @@
+/_document
+/assets
+/bin
+/gen
+/libs
+/res
+/src
+/.classpath
+/.project
+/AndroidManifest.xml
+/ic_launcher-web.png
+/proguard-project.txt
+/project.properties
+/README.md

@@ -19,17 +19,20 @@ import android.widget.LinearLayout;
 public class A0000_Act_InitializationProgram extends __ExtendsActivity implements OnGestureListener, OnDoubleTapListener  
 {
 //===========================================================================//
-//RAM定義
+//RAM定義               
 //===========================================================================//		
 	private static HandleMessage 	lrRoutineHandler;						//定期処理ハンドラ
 	private static String 			lrNowClassName;	  
 	private static GestureDetector 	lrGestureDetector;
 
+	private static Context 			lrContext_MainDisplay;
+	private static Resources 		lrResource_MainDisplay;
+	
 //---------------------------------------------------------------------------//
 //画面切り替え時間
 //---------------------------------------------------------------------------//
-	final static int 				dWaitMenudisplay = 500;					//Loading表示時間(ms)
-	final static int				dCghangeActivity = 500;					//Activity切替え時間(ms)
+	final static int 				dWaitMenudisplay = 50;					//Loading表示時間(ms)
+	final static int				dCghangeActivity = 10;					//Activity切替え時間(ms)
 	private static int 				lrTimerMenuDisplay = 0;					//時間カウンタ
 
 //---------------------------------------------------------------------------//
@@ -96,17 +99,15 @@ public class A0000_Act_InitializationProgram extends __ExtendsActivity implement
 		lrRoutineHandler.fSleep(_g.MainHandler.dMainRoutine);			
      
 		//BMP/BMP_CC読み込み
-		Context 				rContext_MainDisplay;
-		Resources 				rResource_MainDisplay;
-		rContext_MainDisplay 	= this;
-		rResource_MainDisplay 	= rContext_MainDisplay.getResources();
+		lrContext_MainDisplay 	= this;
+		lrResource_MainDisplay 	= lrContext_MainDisplay.getResources();
 		GetWindowBaseRatioSize();
-		_func.DrawBmp.InitalBMP( rResource_MainDisplay );
-		_func.DrawBmpCC.InitalBMP( rResource_MainDisplay );
+		//_func.DrawBmp.InitalBMP( rResource_MainDisplay );
+		//_func.DrawBmpCC.InitalBMP( rResource_MainDisplay );
 		
 		//BGM読み込み
-		_func.BGM.InitalBGM(rContext_MainDisplay);
-		_func.SoundEffect.InitalSoundEffect(rContext_MainDisplay);
+		_func.BGM.InitalBGM(lrContext_MainDisplay);
+		_func.SoundEffect.InitalSoundEffect(lrContext_MainDisplay);
 		
 		//BGM要求
 		_func.BGM.OnCreateRequestBGM(_bgm.Stop);
@@ -122,8 +123,18 @@ public class A0000_Act_InitializationProgram extends __ExtendsActivity implement
     class splashHandler implements Runnable
     {
         public void run() 
-        {
- 		    Intent varIntent = new Intent(A0000_Act_InitializationProgram.this, A0001_Act_MainMenu.class);
+        {	
+    		//BMP/BMP_CC読み込み
+    		_func.DrawBmp.InitalBMP( lrResource_MainDisplay );
+    		_func.DrawBmpCC.InitalBMP( lrResource_MainDisplay );
+    		
+ 		    //Intent varIntent = new Intent(A0000_Act_InitializationProgram.this, A0001_Act_MainMenu.class);
+			//Intent varIntent = new Intent(A0000_Act_InitializationProgram.this, B0100_Act_PlayGame.class);
+			//Intent varIntent = new Intent(A0000_Act_InitializationProgram.this, D0100_Act_PlayGame.class);
+			//Intent varIntent = new Intent(A0000_Act_InitializationProgram.this, E0100_Act_PlayGame.class);
+			Intent varIntent = new Intent(A0000_Act_InitializationProgram.this, E0010_MainMenu.class);	 		
+			//Intent varIntent = new Intent(A0000_Act_InitializationProgram.this, E0050_StageSelect.class);		
+			
  		    startActivity(varIntent);
  		    A0000_Act_InitializationProgram.this.finish();	
  

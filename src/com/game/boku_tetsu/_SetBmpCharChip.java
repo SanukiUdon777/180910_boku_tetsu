@@ -28,7 +28,7 @@ class _bmpcc
 	public static 	BmpCCDataList[] BmpDataList = 
 	{
 		//Char Chipのため、縦横に複数の表示データある。保存時はBMPを拡大しておく
-		new BmpCCDataList(R.drawable.bmpcc_actor10,	Player_XY_Size,	Player_XY_Size, 3 ,4 ),	//0
+		new BmpCCDataList(R.drawable.bmpcc_actor10,		Player_XY_Size,	Player_XY_Size, 3 ,4 ),	//0
 		new BmpCCDataList(R.drawable.bmpcc_actor10, 	Player_XY_Size,	Player_XY_Size, 3 ,4 ),	//1
 		new BmpCCDataList(R.drawable.bmpcc_actor10, 	Player_XY_Size,	Player_XY_Size, 3 ,4 )	//2
 	};
